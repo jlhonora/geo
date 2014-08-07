@@ -18,7 +18,7 @@ ogr2ogr -f "GeoJSON" -t_srs crs:84 -overwrite -progress -simplify 2000
 and crop the precision of the waypoints:
 
 ```
-sed -E -i 's/\([0-9]{2}\.[0-9]{1,4}\)[0-9]*/\1/g'
+sed -E -i 's/([0-9]{2}\.[0-9]{1,4})[0-9]*/\1/g'
 ```
 
 (4 decimals will give you ~11 meters of precision)[http://en.wikipedia.org/wiki/Decimal_degrees].
